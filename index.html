@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>小狐happy的小窝</title>
+  <meta name="description" content="小狐狸的网站，这里放了很多东西">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@300;500;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2e2e4f;
+      --secondary-color: #d4af37;
+      --bg-color: #0b0c10;
+      --text-color: #c5c6c7;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth; /* 启用平滑滚动 */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right bottom, #0b0c10, #1f2833);
+      color: var(--text-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--secondary-color);
+      font-family: "ZCOOL XiaoWei", serif;
+    }
+
+    .nav a {
+      color: var(--text-color);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    .nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    section[id] {
+      scroll-margin-top: 80px; /* 防止被固定头部遮挡 */
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .post-card {
+      background: var(--glass-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      backdrop-filter: blur(5px);
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    .post-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .post-card h3 {
+      color: var(--secondary-color);
+      font-family: "ZCOOL XiaoWei", serif;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary-color);
+      color: var(--text-color);
+      font-size: 0.9rem;
+    }
+
+    /* 新增部分 */
+    .social-links,
+    .contact-info,
+    .shop-link,
+    .friend-links {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .social-links a,
+    .contact-info a,
+    .shop-link a,
+    .friend-links a {
+      display: inline-block;
+      margin: 0 1rem;
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover,
+    .contact-info a:hover,
+    .shop-link a:hover,
+    .friend-links a:hover {
+      color: #fff;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 头部 -->
+  <header class="header">
+    <div class="logo">小狐阁</div>
+    <nav class="nav">
+      <a href="#home">首页</a>
+      <a href="#posts">随笔</a>
+      <a href="#projects">项目</a>
+      <a href="#about">关于</a>
+      <a href="#social">社区账号</a>
+      <a href="#contact">联系方式</a>
+      <a href="#shop">小店铺</a>
+      <a href="#friends">友链</a>
+    </nav>
+  </header>
+
+  <!-- 主体内容 -->
+  <main class="container">
+
+    <!-- 首页 -->
+    <section id="home">
+      <section class="intro">
+        <h1>你好，我是小狐狸(书念)</h1>
+        <p>古风程序猿 / 独立开发者 / 技术诗人</p>
+      </section>
+    </section>
+
+    <!-- 随笔 -->
+    <section id="posts" class="social-links">
+      <h2 style="text-align:center; margin-top: 3rem; margin-bottom: 2rem;">我的随笔</h2>
+      <p style="text-align:center;">
+        - 使用flask迅速构建网站后端，实现高速完成项目的效果<br/>
+      </p>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="social-links">
+      <h2 style="text-align:center; margin-top: 3rem; margin-bottom: 2rem;">我的项目</h2>
+      <p style="text-align:center;">
+        正在开发：<br/>
+        - 古风风格化 UI 框架<br/>
+        <a href="http://sbox.yangyiit.top:2222/">- 基于 flask 的scratch社区</a>
+      </p>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about">
+      <h2 style="text-align:center; margin-top: 3rem; margin-bottom: 2rem;">关于我</h2>
+      <p style="text-align:center;">
+        furry·编程·小说·数学·物理·化学·数电·猫娘<br/>
+        我是书念，一名热爱东方美学与现代技术融合的独立开发者<br/>
+        - 学校史：港宁小学，荷城初级中学<br/>
+        <br/>
+        - 会使用技术/编程语言：C,C++,Python,HTML5,编程猫,scratch,JavaScript,css3,brainfuck<br/>
+        - 最熟悉的语言:Python,scratch<br/>
+        - Python会使用的库:flask<br/>
+        - 热衷于开源项目、前端设计、后端研究、AI与交互艺术
+      </p>
+    </section>
+
+    <!-- 社区账号 -->
+    <section id="social" class="social-links">
+      <h2>我的社区账号</h2>
+      <p>
+        <a href="https://space.bilibili.com/3493133419546943?spm_id_from=333.1007.0.0 " target="_blank">Bilibili</a>
+        <a href="https://github.com/shunianssy " target="_blank">github</a>
+      </p>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact-info">
+      <h2>联系方式</h2>
+      <p>
+        <a href="shunianofficial@163.com">📧 商务邮箱 shunianofficial@163.com</a>
+      </p>
+    </section>
+
+    <!-- 小店铺 -->
+    <section id="shop" class="shop-link">
+      <h2>🛍️ 小店铺</h2>
+      <p><a href="" target="_blank">我的商品</a></p>
+    </section>
+
+    <!-- 友链 -->
+    <section id="friends" class="friend-links">
+      <h2>友情链接</h2>
+      <p>
+        <a href="http://sbox.yangyiit.top:2222/ " target="_blank">小盒子社区首链</a>
+        <a href="http://sbox.yearnstudio.cn/ " target="_blank">小盒子社区https链接</a>
+        <a href="https://www.xiaohongshu.com/user/profile/5f01505e0000000001001bdd?exSource= " target="_blank">小苏の小红书</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    &copy; 2024-2025 小狐阁 · All Rights Reserved.
+  </footer>
+
+</body>
+</html>
